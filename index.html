@@ -4,6 +4,17 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Whats that muscle?</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('area').mouseenter(function() {
+				var muscleGroup = $(this).attr("alt");
+				$('.muscles').attr('src', './Images/'+muscleGroup+'_red.png');
+			}).mouseleave(function() {
+				$('.muscles').attr('src', './Images/Blank_Muscles_No_BG-modified.png');
+			});
+		});
+	</script>
 </head>
 <body>
 	<h1>This is a placeholder for my gym website</h1>
